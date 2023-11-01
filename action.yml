@@ -1,4 +1,4 @@
-name: 'aws-web-deploy'
+name: 'aws-webdeploy'
 description: 'GitHub Action for updating the Origin Path for given Distribution'
 author: '@mean-dao'
 inputs:
