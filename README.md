@@ -26,7 +26,7 @@ jobs:
           
       # Update the Origin Path
       - name: Update OriginPath
-        uses: mean-dao/aws-web-deploy@v1
+        uses: mean-dao/aws-webdeploy@v1
         with:
           ORIGIN_PATH: '/v1/new_path'
           AWS_DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}
