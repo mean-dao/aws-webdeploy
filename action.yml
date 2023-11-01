@@ -1,0 +1,25 @@
+name: 'aws-web-deploy'
+description: 'GitHub Action for updating the Origin Path for given Distribution'
+author: '@mean-dao'
+inputs:
+  ORIGIN_PATH:
+    description: 'New origin path'
+    required: true
+  AWS_DISTRIBUTION_ID:
+    description: 'AWS Cloudfront Distribution ID'
+    required: true
+  AWS_REGION:
+    description: 'Optional. Default is "us-east-1"'
+    required: false
+  ORIGIN_PATH_INDEX:
+    description: 'Optional. Default is 0'
+    required: false
+  AWS_S3_PATH:
+    description: 'Optional. S3 bucket url (e.g. s3://.../...)'
+    required: false
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+branding:
+  icon: truck
+  color: red

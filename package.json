@@ -1,0 +1,30 @@
+{
+  "name": "aws-web-deploy",
+  "version": "1.0.1",
+  "main": "index.ts",
+  "repository": "git@github.com:mean-dao/cloudfront-manager.git",
+  "author": "MeanDao",
+  "license": "MIT",
+  "keywords": [
+    "GitHub Actions",
+    "aws",
+    "cloudfront",
+    "distribution",
+    "release"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsc index.ts",
+    "package": "rimraf dist && ncc build index.ts --license licenses.txt --source-map -o dist"
+  },
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "@aws-sdk/client-cloudfront": "^3.150.0",
+    "@aws-sdk/client-s3": "^3.154.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.6",
+    "@vercel/ncc": "^0.34.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4"
+  }
+}
